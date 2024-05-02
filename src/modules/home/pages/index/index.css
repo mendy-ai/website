@@ -1,0 +1,13 @@
+form {
+    max-width: 300px;
+    width: 100%;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+.bg-linear {
+    background: linear-gradient(to bottom, #FFFFFF, #D9EEE8);
+    /* Substitua as cores conforme necessário */
+}

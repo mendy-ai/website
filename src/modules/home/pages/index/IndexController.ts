@@ -17,8 +17,31 @@ const IndexController = () => {
             icon: '',
         }
     ];
+    const cards2: any = [
+        {
+            icon: '',
+            title: 'Inicie uma conversa',
+            message: 'Escreva uma mensagem, grave áudio, envie imagens ou documentos.',
+            image: './assets/images/home-screen.png'
+        },
+        {
+            icon: '',
+            title: 'Descomplique suas finanças',
+            message: 'Sua gestão financeira de forma fácil com ajuda da Carteira IA. Nunca mais fique perdido nas finanças.',
+            image: './assets/images/chat-table-screen.png'
+        },
+        {
+            icon: '',
+            title: 'Tenha tudo resolvido em um instante',
+            message: 'Otimize seu tempo e simplifique sua rotina financeira com simples comandos. Tudo em uma conversa.',
+            image: './assets/images/chat-screen.png'
+        }
+    ]
 
-    return { cards }
+    return {
+        cards,
+        cards2
+    }
 
 }
 
