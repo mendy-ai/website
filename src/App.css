@@ -18,10 +18,22 @@ body {
 
 .title {
   font-family: 'Work Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: 'Work Sans'; */
-  font-weight: 700;
 }
 
 .default-button {
   background-color: #985699;
+}
+
+/* .mock {
+  background-image: url('assets/images/mock-bg.png');
+  background-size: 1440px;
+}
+
+section,
+header {
+  opacity: 0.5;
+} */
+
+.stage {
+  max-width: 1440px;
 }

@@ -27,12 +27,12 @@ const IndexController = () => {
         {
             icon: '',
             title: 'Descomplique suas finanças',
-            message: 'Sua gestão financeira de forma fácil com ajuda da Carteira IA. Nunca mais fique perdido nas finanças.',
+            message: 'Gestão financeira de forma fácil com ajuda da Carteira IA. Nunca mais fique perdido nas suas finanças.',
             image: './assets/images/chat-table-screen.png'
         },
         {
             icon: '',
-            title: 'Tenha tudo resolvido em um instante',
+            title: 'Resolva tudo em um instante',
             message: 'Otimize seu tempo e simplifique sua rotina financeira com simples comandos. Tudo em uma conversa.',
             image: './assets/images/chat-screen.png'
         }

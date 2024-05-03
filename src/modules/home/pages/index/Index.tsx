@@ -6,68 +6,59 @@ const IndexPage = () => {
     const controller = IndexController();
 
     return <>
+
         <section className="w-full min-h-screen md:h-screen flex flex-column" style={{ backgroundColor: '#00988D' }}>
-            <header>
-                <div className="w-full">
-                    <div className="m-auto w-12 lg:w-8 p-4 flex flex-row justify-content-between">
-                        <img src="./assets/images/logo.png" style={{ height: '32px' }} />
-                        <button className="hidden md:block py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Cadastre-se</button>
-                    </div>
+            <header style={{ backgroundColor: '#058078' }}>
+                <div className="m-auto w-11 stage p-4 flex flex-row justify-content-between">
+                    <img src="./assets/images/logo.png" style={{ height: '38px' }} className="ml-6" />
+                    <button className="hidden md:block py-3 px-6 border-round-md text-white default-button cursor-pointer border-none">Cadastre-se</button>
                 </div>
             </header>
-            <div className="m-auto w-11 lg:w-8 flex flex-column lg:flex-row w-full flex-1">
-                <div className="w-12 lg:w-6 h-full flex flex-column justify-content-center align-items-center md:align-items-start">
-                    <span className="text-4xl md:text-6xl title text-white text-center md:text-left">
-                        A carteira desta geração
+            <div className="stage m-auto w-11 flex flex-column lg:flex-row w-full flex-1 h-full">
+                <div className="w-12 lg:w-5 h-full flex flex-column justify-content-center align-items-center md:align-items-start">
+                    <span className="text-4xl xl:text-7xl title text-white text-center md:text-left xl:pl-8">
+                        A <b>carteira</b> desta geração
                     </span>
-                    <span className="text-xl my-4 text-center md:text-left" style={{ color: '#D9EEE8' }}>
+                    <span className="text-3xl my-6 text-center line-height-3 md:text-left xl:pl-8" style={{ color: '#D9EEE8' }}>
                         Banco, gerenciador de finanças e muito mais em um super app.
                     </span>
-                    <div>
-                        <button className="py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Cadastre-se</button>
-                    </div>
-                    <div className="mt-7">
-                        <img src="./assets/images/apple-play-button.png" style={{ height: '48px' }} className="cursor-pointer" />
-                        <img src="./assets/images/google-play-button.png" style={{ height: '48px' }} className="md:ml-2 cursor-pointer" />
+                    <div className="xl:ml-8">
+                        <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer max-w-6" />
+                        <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer max-w-6" />
                     </div>
                 </div>
-                <div className="w-12 lg:w-6 h-full flex flex-column justify-content-center mb-2 md:mb-0">
-                    <img src="./assets/images/mobile.png" alt="" className="w-full" />
+                <div className="w-12 lg:w-7 h-full flex flex-column justify-content-center mb-2 md:mb-0">
+                    <img src="./assets/images/mobile.png" alt="" className="w-10" />
                 </div>
             </div>
         </section>
-        <section className="w-full min-h-screen md:h-screen flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#985699' }}>
-
-            <div className="w-11 lg:w-8 xl:w-5">
-                <span className="text-4xl md:text-6xl title text-white">
-                    E se suas necessidades financeiras fossem resolvidas em um só lugar?
+        <section className="w-full flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#985699', height: '720px' }}>
+            <div className="w-6 stage">
+                <span className="text-4xl md:text-7xl title text-white">
+                    <b>E se</b> suas necessidades financeiras fossem <b>resolvidas</b>
                 </span>
             </div>
-
         </section>
         <section className="w-full min-h-screen md:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
-            <div className="m-auto w-11 xl:w-8 flex flex-column lg:flex-row h-full">
-                <div className="w-12 lg:w-4 flex flex-1 justify-content-center align-items-center pr-6">
-                    <img src="./assets/images/mobile-2.png" alt="" className="w-full h-auto mt-3 md:mt-0" />
+            <div className="m-auto w-11 stage flex flex-column lg:flex-row h-full">
+                <div className="w-12 lg:w-6 flex flex-1 justify-content-end align-items-center">
+                    <img src="./assets/images/mobile-2.png" alt="" className="w-10 h-auto mt-3 md:mt-0" />
                 </div>
-                <div className="w-12 lg:w-8 flex flex-column justify-content-center mt-4 md:mt-0">
-                    <span className="text-4xl md:text-6xl text-center md:text-left title" style={{ color: '#00988D' }}>
-                        A Carteira IA é um banco e gerenciador financeiro em uma carteira digital
-                    </span>
-                    <span className="text-xl mt-3 text-center md:text-left line-height-3" style={{ color: '#647672' }}>
-                        Tudo que você precisa através de uma assistente impulsionada por inteligência artificial.
+                <div className="w-12 lg:w-6 flex flex-column justify-content-center mt-4 md:mt-0">
+                    <span className="text-4xl md:text-7xl text-center md:text-left title lg:ml-5 w-8" style={{ color: '#00988D' }}>
+                        A <b>Carteira IA</b> combina <b>banco</b> e <b>gestão financeira</b>, com inteligência artificial.
                     </span>
                 </div>
             </div>
         </section>
 
-        <section className="w-full min-h-screen md:h-screen flex align-items-center justify-content-center"
+        <section className="w-full flex flex-row align-items-start justify-content-center"
             style={{ backgroundColor: '#F4F9F8' }}>
-            <div className="m-auto w-11 xl:w-8 flex flex-column">
-                <span className="text-3xl text-center title mb-5" style={{ color: '#00988D' }}>
-                    Razões para ela fazer parte do seu dia a dia
+            <div className="xl:mt-8 w-11 stage flex flex-column my-3">
+                <span className="text-7xl text-center title mb-5" style={{ color: '#00988D' }}>
+                    3 motivos para ter sua <b>Carteira IA</b>
                 </span>
-                <div className="flex flex-column md:flex-row">
+                <div className="flex flex-column md:flex-row w-11 m-auto">
                     {
                         controller.cards.map((item: any) => {
                             return <div className="w-12 md:w-4 py-2 md:py-2 md:px-2 flex">
@@ -76,10 +67,10 @@ const IndexPage = () => {
                                         <img src="./assets/images/expense-icon.png" style={{ height: '32px' }} />
                                     </div>
                                     <div className="w-10">
-                                        <span className="text-lg" style={{ color: '#00988D' }}>
-                                            {item.title}
+                                        <span className="text-4xl line-height-2" style={{ color: '#00988D' }}>
+                                            <b>{item.title}</b>
                                         </span>
-                                        <span className="text-base block mt-3 line-height-2" style={{ color: '#647672' }}>
+                                        <span className="text-xl block mt-3 line-height-2" style={{ color: '#647672' }}>
                                             {item.message}
                                         </span>
                                     </div>
@@ -90,45 +81,47 @@ const IndexPage = () => {
                 </div>
             </div>
         </section>
-        <section className="w-full min-h-screen md:p-8" style={{ boxSizing: 'border-box' }}>
+        <section className="w-full min-h-screen md:p-8 flex flex-column align-items-center" style={{ boxSizing: 'border-box', backgroundColor: '#F4F9F8' }}>
 
-            <div className="shadow-2 border-round-sm">
-                <span className="text-4xl title p-3 md:p-8 block text-center" style={{ color: '#985699' }}>
-                    Como sua carteira funciona
-                </span>
+            <div className="w-11 stage">
+                <div className="shadow-2 w-11 m-auto" style={{ borderRadius: '40px', backgroundColor: 'white' }}>
+                    <span className="text-6xl title p-3 md:p-8 block text-center" style={{ color: '#985699' }}>
+                        Como sua carteira funciona?
+                    </span>
 
-                {
-                    controller.cards2.map((item: any, index: number) => {
+                    {
+                        controller.cards2.map((item: any, index: number) => {
 
-                        const flexRowDirection = index % 2 == 0 ? 'flex-row' : 'flex-row-reverse'
-                        const alignItemsLeft = index % 2 == 0 ? 'align-items-end' : 'align-items-start';
-                        const alignItemsRight = index % 2 == 0 ? 'align-items-start' : 'align-items-end';
+                            const flexRowDirection = index % 2 == 0 ? 'flex-row' : 'flex-row-reverse'
+                            const alignItemsLeft = index % 2 == 0 ? 'align-items-end' : 'align-items-start';
+                            const alignItemsRight = index % 2 == 0 ? 'align-items-start' : 'align-items-end';
 
-                        return <div className={`m-auto w-11 md:w-full flex flex-column lg:${flexRowDirection} min-h-screen`}>
-                            <div className={`w-12 lg:w-6 flex flex-column justify-content-center align-items-center lg:${alignItemsLeft} lg:px-4`}>
-                                <p className="text-3xl title" style={{ color: '#985699' }}>
-                                    {item.title}
-                                </p>
-                                <span className="block text-lg md:w-6 md:text-justify line-height-2" style={{ color: '#79797B' }}>
-                                    {item.message}
-                                </span>
+                            return <div className={`m-auto w-11 md:w-full flex flex-column lg:${flexRowDirection} min-h-screen`}>
+                                <div className={`w-12 lg:w-6 flex flex-column justify-content-center align-items-center lg:${alignItemsLeft} lg:px-4`}>
+                                    <p className="w-8 text-5xl title block my-4" style={{ color: '#985699' }}>
+                                        <b>{item.title}</b>
+                                    </p>
+                                    <span className="block text-2xl md:w-8 line-height-2" style={{ color: '#79797B' }}>
+                                        {item.message}
+                                    </span>
+                                </div>
+                                <div className={`w-12 lg:w-6 flex flex-column justify-content-center align-items-center lg:${alignItemsRight} lg:px-4 mt-5 lg:mt-0`}>
+                                    <img src={item.image} alt="" className="w-6 lg:w-7 xl:w-7" />
+                                </div>
                             </div>
-                            <div className={`w-12 lg:w-6 flex flex-column justify-content-center align-items-center lg:${alignItemsRight} lg:px-4 mt-5 lg:mt-0`}>
-                                <img src={item.image} alt="" className="w-6 lg:w-7 xl:w-4" />
-                            </div>
-                        </div>
 
-                    })
-                }
+                        })
+                    }
 
+                </div>
             </div>
 
         </section>
 
         <section className="w-full min-h-screen lg:h-screen flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#F7EFF8' }}>
 
-            <span className="w-11 text-4xl title xl:w-5 mb-5" style={{ color: '#985699' }}>
-                Entenda melhor [benefício para vc] Carteira IA no seu dia-a-dia
+            <span className="w-11 text-7xl title xl:w-6 mb-5 text-center font-bold" style={{ color: '#985699' }}>
+                Assista nossa apresentação oficial
             </span>
 
             <img src="assets/images/video.png" alt="" className="w-11 xl:w-6" />
