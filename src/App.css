@@ -24,6 +24,12 @@ body {
   background-color: #985699;
 }
 
+.share-button {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: solid #00988D 1px;
+  color: #00988D
+}
+
 /* .mock {
   background-image: url('assets/images/mock-bg.png');
   background-size: 1440px;
