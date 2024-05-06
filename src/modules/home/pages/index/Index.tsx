@@ -8,9 +8,9 @@ const IndexPage = () => {
     return <>
         <section className="w-full min-h-screen xl:h-screen flex flex-column" style={{ backgroundColor: '#00988D' }}>
             <header style={{ backgroundColor: '#058078' }}>
-                <div className="m-auto w-11 stage p-4 flex flex-row justify-content-between">
+                <div className="m-auto w-11 stage p-4 flex flex-row justify-content-center lg:justify-content-between">
                     <img src="./assets/images/logo.png" style={{ height: '38px' }} className="xl:ml-8" />
-                    <button className="hidden md:block py-3 px-6 border-round-md text-white default-button cursor-pointer border-none mr-6">Cadastre-se</button>
+                    <button className="hidden lg:block py-3 px-6 border-round-md text-white default-button cursor-pointer border-none mr-6">Cadastre-se</button>
                 </div>
             </header>
             <div className="stage m-auto w-11 flex flex-column xl:flex-row w-full flex-1 h-full">
@@ -22,7 +22,7 @@ const IndexPage = () => {
                         Banco, gerenciador de finanças e muito mais em um super app.
                     </span>
                     <div className="block xl:hidden w-12 full flex flex-column justify-content-center align-items-center mb-2">
-                        <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-6 xl:mt-0" />
+                        <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-3 xl:mt-0" />
                     </div>
                     <div className="w-full xl:w-auto text-center xl:ml-8 mb-5 xl:mb-0">
                         <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer max-w-6" />
@@ -44,7 +44,7 @@ const IndexPage = () => {
                 </span>
             </div>
         </section>
-        <section className="w-full min-h-screen md:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
+        <section className="w-full lg:min-h-screen xl:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
             <div className="m-auto w-11 stage flex flex-column lg:flex-row h-full">
                 <div className="w-12 lg:w-6 flex flex-1 justify-content-center xl:justify-content-end align-items-center">
                     <img src="./assets/images/mobile-2.png" alt="" className="w-10 h-auto mt-5 md:mt-0" />
@@ -62,7 +62,7 @@ const IndexPage = () => {
                 <span className="text-4xl xl:text-7xl text-center title mb-5" style={{ color: '#00988D' }}>
                     3 motivos para ter sua <b>Carteira IA</b>
                 </span>
-                <div className="flex flex-column md:flex-row w-12 m-auto">
+                <div className="flex flex-column md:flex-row w-12 xl:w-11 m-auto">
                     {
                         controller.cards.map((item: any) => {
                             return <div className="w-12 md:w-4 py-2 md:py-2 md:px-2 flex">
@@ -126,7 +126,7 @@ const IndexPage = () => {
             </div>
 
         </section>
-        <section className="w-full min-h-screen flex flex-column align-items-center justify-content-between" style={{ backgroundColor: '#F7EFF8' }}>
+        <section className="w-full lg:min-h-screen flex flex-column align-items-center justify-content-center xl:justify-content-between" style={{ backgroundColor: '#F7EFF8' }}>
 
             <span className="w-11 text-4xl xl:text-7xl title xl:w-6 mt-8 mb-5 text-center" style={{ color: '#985699' }}>
                 <b>Assista nossa apresentação oficial</b>
@@ -134,7 +134,7 @@ const IndexPage = () => {
 
             <img src="assets/images/video.png" alt="" className="w-11 xl:w-6 mb-5" />
 
-            <div className="w-11 flex flex-column justify-content-center align-items-center mt-5 mb-8">
+            <div className="w-11 flex flex-column justify-content-center align-items-center xl:mt-5 mb-8">
                 <p className="text-lg xl:text-2xl text-center xl:text-left" style={{ color: '#058078' }}>Compartilhe essa inovação com seus amigos.</p>
                 <button type="button" className="text-base py-3 px-6 border-round-md share-button bg-transparent cursor-pointer flex flex-row justify-content-center">
                     Compartilhe
@@ -149,7 +149,7 @@ const IndexPage = () => {
                 <p className="text-4xl xl:text-7xl text-center mt-7 mb-4" style={{ color: '#058078' }}>
                     <b>Entre na lista de espera</b>
                 </p>
-                <span className="text-lg xl:text-2xl block text-center" style={{ color: '#566461' }}>
+                <span className="text-lg xl:text-2xl block text-center px-2" style={{ color: '#566461' }}>
                     Faça seu cadastro e seja um dos primeiros a usar a carteira desta geração.
                 </span>
 
