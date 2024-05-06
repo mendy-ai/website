@@ -6,7 +6,7 @@ import IndexPage from './modules/home/pages/index/Index';
 
 function App() {
   return <div className="mock bg-no-repeat bg-center bg-top">
-    <IndexPage />;
+    <IndexPage />
   </div>
 
 }

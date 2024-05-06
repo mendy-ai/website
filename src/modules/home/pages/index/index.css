@@ -11,3 +11,18 @@ input {
     background: linear-gradient(to bottom, #FFFFFF, #D9EEE8);
     /* Substitua as cores conforme necessário */
 }
+
+.subl {
+    color: #834882;
+    text-decoration: underline;
+}
+
+.card-items {
+    height: '244px'
+}
+
+@media screen and (max-width: 769px) {
+    .card-items {
+        height: auto
+    }
+}
