@@ -1,4 +1,5 @@
 import IndexController from "./IndexController";
+import InputMask from 'react-input-mask';
 import 'animate.css';
 import './index.css';
 
@@ -11,7 +12,8 @@ const IndexPage = () => {
             <header style={{ backgroundColor: '#058078' }}>
                 <div className="m-auto w-11 stage p-4 flex flex-row justify-content-center lg:justify-content-between">
                     <img src="./assets/images/logo.png" style={{ height: '38px' }} className="xl:ml-8" />
-                    <button className="hidden lg:block py-3 px-6 border-round-md text-white default-button cursor-pointer border-none mr-6">Cadastre-se</button>
+                    <button className="hidden lg:block py-3 px-6 border-round-md text-white default-button cursor-pointer border-none mr-6"
+                        onClick={controller.scrollToForm} >Cadastre-se</button>
                 </div>
             </header>
             <div className="stage m-auto w-11 flex flex-column xl:flex-row w-full flex-1 h-full">
@@ -19,7 +21,7 @@ const IndexPage = () => {
                     <span className="w-full text-4xl xl:text-7xl title text-white text-center xl:text-left xl:pl-8 pt-6 xl:pt-0">
                         A <b>carteira</b> desta geração
                     </span>
-                    <span className="w-full text-2xl xl:text-3xl my-6 text-center line-height-3 xl:text-left xl:pl-8" style={{ color: '#D9EEE8' }}>
+                    <span className="w-10 lg:w-full text-2xl xl:text-3xl my-6 text-center line-height-3 xl:text-left xl:pl-8" style={{ color: '#D9EEE8' }}>
                         Banco, gerenciador de finanças e muito mais em um super app.
                     </span>
                     <div className="block xl:hidden w-12 full flex flex-column justify-content-center align-items-center mb-2">
@@ -40,18 +42,18 @@ const IndexPage = () => {
             </div>
         </section>
         <section className="w-full flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#985699', height: '720px' }}>
-            <div className="w-6 stage">
-                <span ref={controller.components.section2.ref} className="block text-4xl lg:text-7xl text-white animated">
+            <div className="w-8 xl:w-6 stage">
+                <span ref={controller.components.section2.ref}
+                    className="block text-5xl lg:text-7xl text-white animated section2-text">
                     <b>E se</b> suas necessidades financeiras fossem <b>resolvidas</b>
-
                 </span>
-                <span ref={controller.components.section2TextFragment.ref} className="block text-4xl lg:text-7xl text-white animated">
-                    <b>em só lugar</b>
+                <span ref={controller.components.section2TextFragment.ref}
+                    className="block text-5xl lg:text-7xl text-white animated  section2-text">
+                    <b>em um só lugar</b>
                 </span>
-
             </div>
         </section>
-        <section className="w-full lg:min-h-screen xl:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
+        <section className="py-6 xl:py-0 w-full xl:min-h-screen xl:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
             <div className="m-auto w-11 stage flex flex-column lg:flex-row h-full">
                 <div ref={controller.components.section3ColumnLeft.ref} className="w-12 lg:w-6 flex flex-1 justify-content-center xl:justify-content-end align-items-center animated">
                     <img src="./assets/images/mobile-2.png" alt="" className="w-10 h-auto mt-5 md:mt-0" />
@@ -97,7 +99,7 @@ const IndexPage = () => {
             <div className="w-11 xl:w-11 stage">
                 <div className="shadow-2 w-12 xl:w-11 m-auto pb-3" style={{ borderRadius: '40px', backgroundColor: 'white' }}>
                     <span ref={controller.components.section5Title.ref} className="text-4xl xl:text-6xl title pt-5 md:p-8 block text-center animated" style={{ color: '#985699' }}>
-                        Como sua carteira funciona?
+                        Como a carteira funciona?
                     </span>
 
                     {
@@ -142,18 +144,25 @@ const IndexPage = () => {
                 <b>Assista nossa apresentação oficial</b>
             </span>
 
-            <img src="assets/images/video.png" alt="" className="w-11 xl:w-6 mb-5" />
+            {/* <img src="assets/images/video.png" alt="" className="w-11 xl:w-6 mb-5" /> */}
+            <div className="w-11 xl:w-6 mb-5">
+                <iframe width="100%" style={{ aspectRatio: '2/1' }}
+                    src="https://www.youtube.com/embed/A6XzeveuVGo"
+                    title="A CARTEIRA DE AÇÕES DO CHATGPT | IA vai superar analistas e gestores escolhendo ações no Brasil?"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+            </div>
 
             <div className="w-11 flex flex-column justify-content-center align-items-center xl:mt-5 mb-8">
                 <p className="text-lg xl:text-2xl text-center xl:text-left" style={{ color: '#058078' }}>Compartilhe essa inovação com seus amigos.</p>
-                <button type="button" className="text-base py-3 px-6 border-round-md share-button bg-transparent cursor-pointer flex flex-row justify-content-center">
+                <button type="button" className="text-base py-3 px-6 border-round-md share-button cursor-pointer flex flex-row justify-content-center">
                     Compartilhe
                     <img src="./assets/images/share.png" style={{ height: '22px' }} alt="" className="pl-2" />
                 </button>
             </div>
 
         </section>
-        <section className="w-full min-h-screen lg:h-screen flex flex-column align-items-center justify-content-center p-2 md:p-5 lg:p-8" style={{ boxSizing: "border-box" }}>
+        <section ref={controller.sectionForm} className="w-full min-h-screen lg:h-screen flex flex-column align-items-center justify-content-center p-2 md:p-5 lg:p-8" style={{ boxSizing: "border-box" }}>
 
             <div className="w-full xl:w-8" style={{ backgroundColor: '#B4DBD3', borderRadius: 40 }}>
                 <p className="text-4xl xl:text-7xl text-center mt-7 mb-4" style={{ color: '#058078' }}>
@@ -169,7 +178,7 @@ const IndexPage = () => {
                         <img src="assets/images/form-mobile.png" alt="" className="w-10 xl:w-10" />
                     </div>
                     <div className="xl:w-5 lg:pl-4 flex flex-column align-items-center xl:align-items-start justify-content-center">
-                        <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0"
+                        <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0 pr-3"
                             onSubmit={controller.submitForm}>
                             <div className="field">
                                 <label className="text-base" style={{ color: '#616162' }}>Nome</label>
@@ -189,11 +198,19 @@ const IndexPage = () => {
                             </div>
                             <div className="field">
                                 <label className="text-base" style={{ color: '#616162' }}>Celular</label>
-                                <input placeholder="Digite seu número" type="phone"
+                                {/* <input placeholder="Digite seu número" type="phone"
                                     value={controller.formData.phone}
                                     onChange={controller.handleChange}
                                     name="phone"
-                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
+                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" /> */}
+                                <InputMask
+                                    placeholder="Digite seu telefone"
+                                    mask="(99) 99999-9999"
+                                    name="phone"
+                                    value={controller.formData.phone}
+                                    onChange={controller.handleChange}
+                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white"
+                                />
                             </div>
                             <div className="mt-4">
                                 <button type="submit" className="w-full py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Enviar</button>

@@ -8,6 +8,7 @@ const IndexController = () => {
         email: '',
         phone: ''
     });
+    const sectionForm = useRef(null)
     const components: any = {
         section1ColumnLeft: {
             className: 'animate__fast animate__animated animate__backInLeft',
@@ -149,6 +150,9 @@ const IndexController = () => {
         })
 
     }
+    const scrollToForm = () => {
+        (sectionForm.current as any).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     useEffect(() => {
 
@@ -208,8 +212,10 @@ const IndexController = () => {
         cards2,
         components,
         formData,
+        sectionForm,
         submitForm,
-        handleChange
+        handleChange,
+        scrollToForm
     }
 
 }

@@ -25,10 +25,27 @@ body {
   background-color: #985699;
 }
 
+.default-button:hover {
+  background-color: #6C3C6B;
+}
+
+.default-button:active {
+  background-color: #381A37;
+}
+
 .share-button {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: solid #00988D 1px;
-  color: #00988D
+  color: #00988D;
+  background-color: transparent;
+}
+
+.share-button:hover {
+  background-color: #D9EEE8;
+}
+
+.share-button:active {
+  background-color: #86C2B7;
 }
 
 /* .mock {

@@ -1,6 +1,7 @@
 form {
     max-width: 350px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 input {
@@ -24,6 +25,10 @@ input {
 @media screen and (max-width: 769px) {
     .card-items {
         height: auto
+    }
+
+    .section2-text {
+        line-height: 55px;
     }
 }
 
