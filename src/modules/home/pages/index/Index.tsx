@@ -1,4 +1,5 @@
 import IndexController from "./IndexController";
+import 'animate.css';
 import './index.css';
 
 const IndexPage = () => {
@@ -14,7 +15,7 @@ const IndexPage = () => {
                 </div>
             </header>
             <div className="stage m-auto w-11 flex flex-column xl:flex-row w-full flex-1 h-full">
-                <div className="w-12 xl:w-5 h-full flex flex-column justify-content-center align-items-center md:align-items-start">
+                <div ref={controller.components.section1ColumnLeft.ref} className="w-12 xl:w-5 h-full flex flex-column justify-content-center align-items-center md:align-items-start animated">
                     <span className="w-full text-4xl xl:text-7xl title text-white text-center xl:text-left xl:pl-8 pt-6 xl:pt-0">
                         A <b>carteira</b> desta geração
                     </span>
@@ -25,31 +26,37 @@ const IndexPage = () => {
                         <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-3 xl:mt-0" />
                     </div>
                     <div className="w-full xl:w-auto text-center xl:ml-8 mb-5 xl:mb-0">
-                        <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer max-w-6" />
-                        <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer max-w-6" />
+                        <a href="https://apps.apple.com/br/app/carteira-ia/id6480260085?l=pt-BR" target="_blank">
+                            <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer max-w-6" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.carteiraia.app" target="_blank">
+                            <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer max-w-6" />
+                        </a>
                     </div>
                 </div>
-                <div className="hidden w-7 h-full xl:flex flex-column justify-content-center align-items-start mb-2 md:mb-0">
+                <div ref={controller.components.section1ColumnRight.ref} className="hidden w-7 h-full xl:flex flex-column justify-content-center align-items-start mb-2 md:mb-0 animated">
                     <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-6 xl:mt-0" />
                 </div>
-                {/* <div className="hidden xl:block w-12 lg:w-7 h-full flex-1 mb-2 md:mb-0">
-                    <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-6 xl:mt-0" />
-                </div> */}
             </div>
         </section>
         <section className="w-full flex flex-column align-items-center justify-content-center" style={{ backgroundColor: '#985699', height: '720px' }}>
             <div className="w-6 stage">
-                <span className="text-4xl lg:text-7xl title text-white">
+                <span ref={controller.components.section2.ref} className="block text-4xl lg:text-7xl text-white animated">
                     <b>E se</b> suas necessidades financeiras fossem <b>resolvidas</b>
+
                 </span>
+                <span ref={controller.components.section2TextFragment.ref} className="block text-4xl lg:text-7xl text-white animated">
+                    <b>em só lugar</b>
+                </span>
+
             </div>
         </section>
         <section className="w-full lg:min-h-screen xl:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
             <div className="m-auto w-11 stage flex flex-column lg:flex-row h-full">
-                <div className="w-12 lg:w-6 flex flex-1 justify-content-center xl:justify-content-end align-items-center">
+                <div ref={controller.components.section3ColumnLeft.ref} className="w-12 lg:w-6 flex flex-1 justify-content-center xl:justify-content-end align-items-center animated">
                     <img src="./assets/images/mobile-2.png" alt="" className="w-10 h-auto mt-5 md:mt-0" />
                 </div>
-                <div className="w-12 lg:w-6 flex flex-column justify-content-center align-items-center mt-6 md:mt-0">
+                <div ref={controller.components.section3ColumnRight.ref} className="w-12 lg:w-6 flex flex-column justify-content-center align-items-center mt-6 md:mt-0 animated">
                     <span className="text-4xl xl:text-7xl xl:ml-5 text-center xl:text-left w-10 line-height-2" style={{ color: '#00988D' }}>
                         A <b>Carteira IA</b> combina <b className="subl">banco</b> e <b className="subl">gestão financeira</b>, com inteligência artificial.
                     </span>
@@ -59,13 +66,16 @@ const IndexPage = () => {
         <section className="w-full flex flex-row align-items-start justify-content-center"
             style={{ backgroundColor: '#F4F9F8' }}>
             <div className="w-11 stage flex flex-column my-8 xl:my-3">
-                <span className="text-4xl xl:text-7xl text-center title mb-5" style={{ color: '#00988D' }}>
+                <span ref={controller.components.section4Title.ref}
+                    className="text-4xl xl:text-7xl text-center title mb-5 animated"
+                    style={{ color: '#00988D' }}>
                     3 motivos para ter sua <b>Carteira IA</b>
                 </span>
-                <div className="flex flex-column md:flex-row w-12 xl:w-11 m-auto">
+                <div ref={controller.components.section4Cards.ref}
+                    className="flex flex-column md:flex-row w-12 xl:w-11 m-auto animated">
                     {
-                        controller.cards.map((item: any) => {
-                            return <div className="w-12 md:w-4 py-2 md:py-2 md:px-2 flex">
+                        controller.cards.map((item: any, index: number) => {
+                            return <div className="w-12 md:w-4 py-2 md:py-2 md:px-2 flex" key={index}>
                                 <div className="bg-white p-4 border-round-lg shadow-1 flex flex-row flex-1 card-items">
                                     <div>
                                         <span className="text-2xl line-height-2" style={{ color: '#00988D' }}>
@@ -86,7 +96,7 @@ const IndexPage = () => {
 
             <div className="w-11 xl:w-11 stage">
                 <div className="shadow-2 w-12 xl:w-11 m-auto pb-3" style={{ borderRadius: '40px', backgroundColor: 'white' }}>
-                    <span className="text-4xl xl:text-6xl title pt-5 md:p-8 block text-center" style={{ color: '#985699' }}>
+                    <span ref={controller.components.section5Title.ref} className="text-4xl xl:text-6xl title pt-5 md:p-8 block text-center animated" style={{ color: '#985699' }}>
                         Como sua carteira funciona?
                     </span>
 
@@ -97,8 +107,8 @@ const IndexPage = () => {
                             const alignItemsLeft = index % 2 == 0 ? 'align-items-end' : 'align-items-start';
                             const alignItemsRight = index % 2 == 0 ? 'align-items-start' : 'align-items-end';
 
-                            return <div className={`m-auto w-11 md:w-full flex flex-column lg:${flexRowDirection} mb-5`}>
-                                <div className={`w-12 lg:w-5 flex flex-column justify-content-center align-items-center lg:${alignItemsLeft} lg:px-4`}>
+                            return <div className={`m-auto w-11 md:w-full flex flex-column lg:${flexRowDirection} mb-5`} key={index}>
+                                <div ref={controller.components.section5ItemsLeft[index].ref} className={`w-12 lg:w-5 flex flex-column justify-content-center align-items-center lg:${alignItemsLeft} lg:px-4 animated`}>
 
                                     <div className="w-12 md:w-9 flex flex-row xl:flex-column align-items-center xl:align-items-start xl:justify-content-center">
                                         <div className="text-left w-2 xl:w-9">
@@ -114,7 +124,7 @@ const IndexPage = () => {
                                         {item.message}
                                     </span>
                                 </div>
-                                <div className={`w-12 lg:w-7 flex flex-column justify-content-center align-items-center lg:${alignItemsRight} lg:px-4 mt-5 lg:mt-0`}>
+                                <div ref={controller.components.section5ItemsRight[index].ref} className={`w-12 lg:w-7 flex flex-column justify-content-center align-items-center lg:${alignItemsRight} lg:px-4 mt-5 lg:mt-0 animated`}>
                                     <img src={item.image} alt="" className={`w-10 lg:w-7 xl:w-9 ${index % 2 == 0 ? 'xl:ml-4' : ''}`} />
                                 </div>
                             </div>
@@ -159,24 +169,34 @@ const IndexPage = () => {
                         <img src="assets/images/form-mobile.png" alt="" className="w-10 xl:w-10" />
                     </div>
                     <div className="xl:w-5 lg:pl-4 flex flex-column align-items-center xl:align-items-start justify-content-center">
-                        <form className="my-4 xl:my-0">
+                        <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0"
+                            onSubmit={controller.submitForm}>
                             <div className="field">
                                 <label className="text-base" style={{ color: '#616162' }}>Nome</label>
                                 <input placeholder="Digite seu nome completo" type="text"
+                                    value={controller.formData.name}
+                                    onChange={controller.handleChange}
+                                    name="name"
                                     className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
                             </div>
                             <div className="field">
                                 <label className="text-base" style={{ color: '#616162' }}>Email</label>
                                 <input placeholder="Digite seu email" type="email"
+                                    value={controller.formData.email}
+                                    onChange={controller.handleChange}
+                                    name="email"
                                     className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
                             </div>
                             <div className="field">
                                 <label className="text-base" style={{ color: '#616162' }}>Celular</label>
                                 <input placeholder="Digite seu número" type="phone"
+                                    value={controller.formData.phone}
+                                    onChange={controller.handleChange}
+                                    name="phone"
                                     className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
                             </div>
                             <div className="mt-4">
-                                <button type="button" className="w-full py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Enviar</button>
+                                <button type="submit" className="w-full py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -187,7 +207,7 @@ const IndexPage = () => {
 
         </section>
         <section className="bg-linear w-full min-h-screen lg:h-screen flex flex-column lg:flex-row align-items-center justify-content-center">
-            <div className="w-11 lg:w-5 xl:w-3 xl:pr-4">
+            <div ref={controller.components.section8ColumnLeft.ref} className="w-11 lg:w-5 xl:w-3 xl:pr-4 animated">
                 <span className="mt-4 lg:mt-0 text-center lg:text-left block w-full text-4xl xl:text-6xl title line-height-2" style={{ color: '#00988D' }}>
                     Baixe o app e <b>economize</b> de forma inteligente
                 </span>
@@ -195,11 +215,15 @@ const IndexPage = () => {
                     <img src="assets/images/mobile-3.png" alt="" className="w-10" />
                 </div>
                 <div className="my-7 text-center xl:text-left">
-                    <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer" />
-                    <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer" />
+                    <a href="https://apps.apple.com/br/app/carteira-ia/id6480260085?l=pt-BR" target="_blank">
+                        <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer" />
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.carteiraia.app" target="_blank">
+                        <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer" />
+                    </a>
                 </div>
             </div>
-            <div className="hidden xl:block w-8 lg:w-5 xl:w-3 xl:pl-4">
+            <div ref={controller.components.section8ColumnRight.ref} className="hidden xl:block w-8 lg:w-5 xl:w-3 xl:pl-4 animated">
                 <img src="assets/images/mobile-3.png" alt="" className="w-full mb-5 xl:mb-0" />
             </div>
         </section>
@@ -211,24 +235,41 @@ const IndexPage = () => {
                         Lorem ipsum dolor sit amet consectetur. Quis amet scelerisque diam mauris sed. Semper fermentum quis et lobortis diam.
                     </p>
                     <div className="text-center xl:text-left">
-                        <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer" />
-                        <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer" />
+                        <a href="https://apps.apple.com/br/app/carteira-ia/id6480260085?l=pt-BR" target="_blank">
+                            <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.carteiraia.app" target="_blank">
+                            <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2" />
+                        </a>
                     </div>
                 </div>
                 <div className="w-11 lg:w-4 py-4 lg:py-0 flex flex-column align-items-center justify-content-center">
                     <ul className="pl-0 list-none line-height-4" style={{ color: '#D9EEE8' }}>
                         <li className="text-lg"><b>Fale conosco</b></li>
                         <li className="text-base">contato@carteiraia.com</li>
-                        <li className="text-base">Política de Privacidade</li>
-                        <li className="text-base">Exclusão de Conta</li>
+                        <li className="text-base">
+                            <a className="text-white" href="https://carteiraia.com/politica-privacidade.html">
+                                Política de Privacidade
+                            </a>
+                        </li>
+                        <li className="text-base">
+                            <a className="text-white" href="https://carteiraia.com/exclusao-de-conta.html">
+                                Exclusão de Conta
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div className="w-11 lg:w-4 py-4 lg:py-0 flex flex-row align-items-center justify-content-center">
 
-                    <img src="assets/images/facebook.png" style={{ width: '32px' }} />
-                    <img src="assets/images/instagram.png" style={{ width: '32px' }} className="mx-4" />
-                    <img src="assets/images/linkedin.png" style={{ width: '32px' }} />
-
+                    <a href="https://www.facebook.com/carteiraia" target="_blank">
+                        <img src="assets/images/facebook.png" style={{ width: '32px' }} />
+                    </a>
+                    <a href="https://www.instagram.com/carteira-ia/" target="_blank" className="mx-4">
+                        <img src="assets/images/instagram.png" style={{ width: '32px' }} />
+                    </a>
+                    <a href="https://www.linkedin.com/company/carteiraia/" target="_blank">
+                        <img src="assets/images/linkedin.png" style={{ width: '32px' }} />
+                    </a>
                 </div>
             </div>
         </section>
