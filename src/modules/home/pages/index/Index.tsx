@@ -48,8 +48,8 @@ const IndexPage = () => {
                     <b>E se</b> suas necessidades financeiras fossem <b>resolvidas</b>
                 </span>
                 <span ref={controller.components.section2TextFragment.ref}
-                    className="block text-5xl lg:text-7xl text-white animated  section2-text">
-                    <b>em um só lugar</b>
+                    className="block text-5xl lg:text-7xl text-white animated  section2-text underline">
+                    <b>em um só lugar ?</b>
                 </span>
             </div>
         </section>
