@@ -3,6 +3,8 @@ import { isArray } from "util";
 
 const IndexController = () => {
 
+    const [shareModelVisible, setShareModelVisible] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -131,17 +133,20 @@ const IndexController = () => {
             [e.target.name]: e.target.value
         });
     };
-    const submitForm = (event: any) => {
-        console.log('FORM', formData)
+    const submitForm = async (event: any) => {
+
         event.preventDefault();
         event.stopPropagation();
-        fetch(event.target.action, {
+
+        await fetch(event.target.action, {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: {
                 'Accept': 'application/json'
             }
         });
+
+        setFormSubmitted(true);
 
         setFormData({
             name: '',
@@ -213,9 +218,13 @@ const IndexController = () => {
         components,
         formData,
         sectionForm,
+        shareModelVisible,
+        formSubmitted,
         submitForm,
         handleChange,
-        scrollToForm
+        scrollToForm,
+        setShareModelVisible,
+        setFormSubmitted
     }
 
 }

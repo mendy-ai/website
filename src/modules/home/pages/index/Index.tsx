@@ -1,5 +1,10 @@
 import IndexController from "./IndexController";
 import InputMask from 'react-input-mask';
+import Modal from 'react-modal';
+import {
+    FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, LinkedinShareButton,
+    LinkedinIcon, TelegramShareButton, TelegramIcon, TwitterShareButton, TwitterIcon, XIcon
+} from "react-share";
 import 'animate.css';
 import './index.css';
 
@@ -155,7 +160,8 @@ const IndexPage = () => {
 
             <div className="w-11 flex flex-column justify-content-center align-items-center xl:mt-5 mb-8">
                 <p className="text-lg xl:text-2xl text-center xl:text-left" style={{ color: '#058078' }}>Compartilhe essa inovação com seus amigos.</p>
-                <button type="button" className="text-base py-3 px-6 border-round-md share-button cursor-pointer flex flex-row justify-content-center">
+                <button type="button" className="text-base py-3 px-6 border-round-md share-button cursor-pointer flex flex-row justify-content-center"
+                    onClick={() => controller.setShareModelVisible(true)}>
                     Compartilhe
                     <img src="./assets/images/share.png" style={{ height: '22px' }} alt="" className="pl-2" />
                 </button>
@@ -178,44 +184,51 @@ const IndexPage = () => {
                         <img src="assets/images/form-mobile.png" alt="" className="w-10 xl:w-10" />
                     </div>
                     <div className="xl:w-5 lg:pl-4 flex flex-column align-items-center xl:align-items-start justify-content-center">
-                        <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0 pr-3"
-                            onSubmit={controller.submitForm}>
-                            <div className="field">
-                                <label className="text-base" style={{ color: '#616162' }}>Nome</label>
-                                <input placeholder="Digite seu nome completo" type="text"
-                                    value={controller.formData.name}
-                                    onChange={controller.handleChange}
-                                    name="name"
-                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
-                            </div>
-                            <div className="field">
-                                <label className="text-base" style={{ color: '#616162' }}>Email</label>
-                                <input placeholder="Digite seu email" type="email"
-                                    value={controller.formData.email}
-                                    onChange={controller.handleChange}
-                                    name="email"
-                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
-                            </div>
-                            <div className="field">
-                                <label className="text-base" style={{ color: '#616162' }}>Celular</label>
-                                {/* <input placeholder="Digite seu número" type="phone"
-                                    value={controller.formData.phone}
-                                    onChange={controller.handleChange}
-                                    name="phone"
-                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" /> */}
-                                <InputMask
-                                    placeholder="Digite seu telefone"
-                                    mask="(99) 99999-9999"
-                                    name="phone"
-                                    value={controller.formData.phone}
-                                    onChange={controller.handleChange}
-                                    className="w-12 p-3 border-1 border-solid border-round-sm block bg-white"
-                                />
-                            </div>
-                            <div className="mt-4">
-                                <button type="submit" className="w-full py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Enviar</button>
-                            </div>
-                        </form>
+                        {
+                            controller.formSubmitted == false
+                                ? <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0 pr-3"
+                                    onSubmit={controller.submitForm}>
+                                    <div className="field">
+                                        <label className="text-base" style={{ color: '#616162' }}>Nome</label>
+                                        <input placeholder="Digite seu nome completo" type="text" required
+                                            value={controller.formData.name}
+                                            onChange={controller.handleChange}
+                                            name="name"
+                                            className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
+                                    </div>
+                                    <div className="field">
+                                        <label className="text-base" style={{ color: '#616162' }}>Email</label>
+                                        <input placeholder="Digite seu email" type="email" required
+                                            value={controller.formData.email}
+                                            onChange={controller.handleChange}
+                                            name="email"
+                                            className="w-12 p-3 border-1 border-solid border-round-sm block bg-white" />
+                                    </div>
+                                    <div className="field">
+                                        <label className="text-base" style={{ color: '#616162' }}>Celular</label>
+                                        <InputMask
+                                            required
+                                            placeholder="Digite seu telefone"
+                                            mask="(99) 99999-9999"
+                                            name="phone"
+                                            value={controller.formData.phone}
+                                            onChange={controller.handleChange}
+                                            className="w-12 p-3 border-1 border-solid border-round-sm block bg-white"
+                                        />
+                                    </div>
+                                    <div className="mt-4">
+                                        <button type="submit" className="w-full py-3 px-5 border-round-md text-white default-button cursor-pointer border-none">Enviar</button>
+                                    </div>
+                                </form>
+                                : <div className="w-full">
+                                    <div className="w-8 m-auto">
+                                        <p className="text-3xl text-left line-height-2" style={{ color: '#058078' }}>
+                                            Agradecemos seu interesse! Em breve você fará parte da revolução financeira com a Carteira IA!
+                                        </p>
+                                    </div>
+                                </div>
+                        }
+
                     </div>
 
                 </div>
@@ -303,6 +316,50 @@ const IndexPage = () => {
                 </span>
             </div>
         </section>
+
+        <Modal
+            isOpen={controller.shareModelVisible}
+            onAfterOpen={() => controller.setShareModelVisible(true)}
+            onRequestClose={() => controller.setShareModelVisible(false)}
+            style={{
+                content: {
+                    top: '50%',
+                    left: '50%',
+                    right: 'auto',
+                    bottom: 'auto',
+                    marginRight: '-50%',
+                    transform: 'translate(-50%, -50%)',
+                }
+            }}
+
+        >
+            <span className="text-lg mb-3 block font-bold" style={{ color: '#985699' }}>Compartilhe essa novidade com seus amigos</span>
+            <FacebookShareButton url={window.location.href} className="mx-2" hashtag="#carteriaia, #chatgpt, #inteligenciaarticial, #ia">
+                <FacebookIcon size={50} round />
+            </FacebookShareButton>
+            <LinkedinShareButton className="mx-2"
+                url={window.location.href}
+                source={window.location.href}
+                title="Carteira IA - a revolução para sua vida financeira"
+                summary="Carteria IA - a revolução para sua vida financeira, controle o seu financeiro usando IA e cuide melhor do seu dinheiro"
+            >
+                <LinkedinIcon size={50} round />
+            </LinkedinShareButton>
+            <TwitterShareButton url={window.location.href} className="mx-2"
+                title='Carteira IA - a revolução para sua vida financeira'
+                hashtags={['carteiraia', 'inteligenciaarticial', 'ia', 'chatgpt']}
+            >
+                <XIcon size={50} round />
+            </TwitterShareButton>
+            <WhatsappShareButton url={window.location.href} className="mx-2"
+                title='Carteira IA - a revolução para sua vida financeira'
+            >
+                <WhatsappIcon size={50} round />
+            </WhatsappShareButton>
+            <TelegramShareButton url={window.location.href} className="mx-2" title='Carteira IA - a revolução para sua vida financeira'>
+                <TelegramIcon size={50} round />
+            </TelegramShareButton>
+        </Modal>
     </>
 
 }
