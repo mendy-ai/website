@@ -26,9 +26,16 @@ const IndexPage = () => {
                     <span className="w-full text-4xl xl:text-7xl title text-white text-center xl:text-left xl:pl-8 pt-6 xl:pt-0">
                         A <b>carteira</b> desta geração
                     </span>
+
                     <span className="w-10 lg:w-full text-2xl xl:text-3xl my-6 text-center line-height-3 xl:text-left xl:pl-8" style={{ color: '#D9EEE8' }}>
                         Banco, gerenciador de finanças e muito mais em um super app.
                     </span>
+
+                    <div className="text-center w-full lg:hidden mb-6">
+                        <button className="text-xl py-3 px-6 border-round-md text-white default-button cursor-pointer border-none"
+                            onClick={controller.scrollToForm} >Cadastre-se</button>
+                    </div>
+
                     <div className="block xl:hidden w-12 full flex flex-column justify-content-center align-items-center mb-2">
                         <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-3 xl:mt-0" />
                     </div>
@@ -186,7 +193,7 @@ const IndexPage = () => {
                     <div className="xl:w-5 lg:pl-4 flex flex-column align-items-center xl:align-items-start justify-content-center">
                         {
                             controller.formSubmitted == false
-                                ? <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0 pr-3"
+                                ? <form action="https://formspree.io/f/xoqogeqy" className="my-4 xl:my-0 lg:pr-3"
                                     onSubmit={controller.submitForm}>
                                     <div className="field">
                                         <label className="text-base" style={{ color: '#616162' }}>Nome</label>
