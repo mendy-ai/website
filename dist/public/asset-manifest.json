@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc383788.css",
+    "main.js": "/static/js/main.a3c1f715.js",
+    "static/js/453.adc34edb.chunk.js": "/static/js/453.adc34edb.chunk.js",
+    "static/media/worksans-variablefont_wght-webfont.woff": "/static/media/worksans-variablefont_wght-webfont.6aa3fc0c9697f5c02e29.woff",
+    "static/media/worksans-variablefont_wght-webfont.woff2": "/static/media/worksans-variablefont_wght-webfont.fc59f20357d758ef6e1b.woff2",
+    "index.html": "/index.html",
+    "main.cc383788.css.map": "/static/css/main.cc383788.css.map",
+    "main.a3c1f715.js.map": "/static/js/main.a3c1f715.js.map",
+    "453.adc34edb.chunk.js.map": "/static/js/453.adc34edb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc383788.css",
+    "static/js/main.a3c1f715.js"
+  ]
+}
