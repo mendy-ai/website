@@ -16,7 +16,7 @@ const IndexPage = () => {
         <section className="w-full min-h-screen xl:h-screen flex flex-column" style={{ backgroundColor: '#00988D' }}>
             <header style={{ backgroundColor: '#058078' }}>
                 <div className="m-auto w-11 stage p-4 flex flex-row justify-content-center lg:justify-content-between">
-                    <img src="./assets/images/logo.png" style={{ height: '38px' }} className="xl:ml-8" />
+                    <img src="./assets/images/logo.png?v=2" style={{ height: '38px' }} className="xl:ml-8" />
                     <button className="hidden lg:block py-3 px-6 border-round-md text-white default-button cursor-pointer border-none mr-6"
                         onClick={controller.scrollToForm} >Cadastre-se</button>
                 </div>
@@ -28,7 +28,7 @@ const IndexPage = () => {
                     </span>
 
                     <span className="w-10 lg:w-full text-2xl xl:text-3xl my-6 text-center line-height-3 xl:text-left xl:pl-8" style={{ color: '#D9EEE8' }}>
-                        Banco, gerenciador de finanças e muito mais em um super app.
+                        Gerenciador de finanças e muito mais em um Super App.
                     </span>
 
                     <div className="text-center w-full lg:hidden mb-6">
@@ -37,19 +37,19 @@ const IndexPage = () => {
                     </div>
 
                     <div className="block xl:hidden w-12 full flex flex-column justify-content-center align-items-center mb-2">
-                        <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-3 xl:mt-0" />
+                        <img src="./assets/images/mobile.png?v=2" alt="" className="w-12 lg:w-10 my-3 xl:mt-0" />
                     </div>
                     <div className="w-full xl:w-auto text-center xl:ml-8 mb-5 xl:mb-0">
                         <a href="https://apps.apple.com/br/app/carteira-ia/id6480260085?l=pt-BR" target="_blank">
-                            <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer max-w-6" />
+                            <img src="./assets/images/apple-play-button.png?v=2" style={{ height: '56px' }} className="cursor-pointer max-w-6" />
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.carteiraia.app" target="_blank">
-                            <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer max-w-6" />
+                            <img src="./assets/images/google-play-button.png?v=2" style={{ height: '56px' }} className="md:ml-2 cursor-pointer max-w-6" />
                         </a>
                     </div>
                 </div>
                 <div ref={controller.components.section1ColumnRight.ref} className="hidden w-7 h-full xl:flex flex-column justify-content-center align-items-start mb-2 md:mb-0 animated">
-                    <img src="./assets/images/mobile.png" alt="" className="w-12 lg:w-10 my-6 xl:mt-0" />
+                    <img src="./assets/images/mobile.png?v=2" alt="" className="w-12 lg:w-10 my-6 xl:mt-0" />
                 </div>
             </div>
         </section>
@@ -68,11 +68,11 @@ const IndexPage = () => {
         <section className="py-6 xl:py-0 w-full xl:min-h-screen xl:h-screen" style={{ backgroundColor: '#F4F9F8' }}>
             <div className="m-auto w-11 stage flex flex-column lg:flex-row h-full">
                 <div ref={controller.components.section3ColumnLeft.ref} className="w-12 lg:w-6 flex flex-1 justify-content-center xl:justify-content-end align-items-center animated">
-                    <img src="./assets/images/mobile-2.png" alt="" className="w-10 h-auto mt-5 md:mt-0" />
+                    <img src="./assets/images/mobile-2.png?v=2" alt="" className="w-12 h-auto mt-5 md:mt-0" />
                 </div>
                 <div ref={controller.components.section3ColumnRight.ref} className="w-12 lg:w-6 flex flex-column justify-content-center align-items-center mt-6 md:mt-0 animated">
                     <span className="text-4xl xl:text-7xl xl:ml-5 text-center xl:text-left w-10 line-height-2" style={{ color: '#00988D' }}>
-                        A <b>Carteira IA</b> combina <b className="subl">banco</b> e <b className="subl">gestão financeira</b>, com inteligência artificial.
+                        A <b>Carteira IA</b> combina <b className="subl">gestão financeira</b> com inteligência artificial.
                     </span>
                 </div>
             </div>
@@ -110,7 +110,7 @@ const IndexPage = () => {
 
             <div className="w-11 xl:w-11 stage">
                 <div className="shadow-2 w-12 xl:w-11 m-auto pb-3" style={{ borderRadius: '40px', backgroundColor: 'white' }}>
-                    <span ref={controller.components.section5Title.ref} className="text-4xl xl:text-6xl title pt-5 md:p-8 block text-center animated" style={{ color: '#985699' }}>
+                    <span ref={controller.components.section5Title.ref} className="text-4xl xl:text-6xl title pt-5 pb-5 md:p-8 block text-center animated" style={{ color: '#985699' }}>
                         Como a carteira funciona?
                     </span>
 
@@ -156,11 +156,10 @@ const IndexPage = () => {
                 <b>Assista nossa apresentação oficial</b>
             </span>
 
-            {/* <img src="assets/images/video.png" alt="" className="w-11 xl:w-6 mb-5" /> */}
             <div className="w-11 xl:w-6 mb-5">
                 <iframe width="100%" style={{ aspectRatio: '2/1' }}
-                    src="https://www.youtube.com/embed/A6XzeveuVGo"
-                    title="A CARTEIRA DE AÇÕES DO CHATGPT | IA vai superar analistas e gestores escolhendo ações no Brasil?"
+                    src="https://www.youtube.com/embed/YBFUBUanyZk"
+                    title="CARTEIRA IA - A CARTEIRA DESTA GERAÇÃO"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
             </div>
@@ -170,12 +169,12 @@ const IndexPage = () => {
                 <button type="button" className="text-base py-3 px-6 border-round-md share-button cursor-pointer flex flex-row justify-content-center"
                     onClick={() => controller.setShareModelVisible(true)}>
                     Compartilhe
-                    <img src="./assets/images/share.png" style={{ height: '22px' }} alt="" className="pl-2" />
+                    <img src="./assets/images/share.png?v=2" style={{ height: '22px' }} alt="" className="pl-2" />
                 </button>
             </div>
 
         </section>
-        <section ref={controller.sectionForm} className="w-full min-h-screen lg:h-screen flex flex-column align-items-center justify-content-center p-2 md:p-5 lg:p-8" style={{ boxSizing: "border-box" }}>
+        <section id="cadastrar" ref={controller.sectionForm} className="w-full min-h-screen lg:h-screen flex flex-column align-items-center justify-content-center p-2 md:p-5 lg:p-8" style={{ boxSizing: "border-box" }}>
 
             <div className="w-full xl:w-8" style={{ backgroundColor: '#B4DBD3', borderRadius: 40 }}>
                 <p className="text-4xl xl:text-7xl text-center mt-7 mb-4" style={{ color: '#058078' }}>
@@ -188,7 +187,7 @@ const IndexPage = () => {
                 <div className="w-full flex flex-column xl:flex-row my-6">
 
                     <div className="xl:w-7 text-center xl:text-right">
-                        <img src="assets/images/form-mobile.png" alt="" className="w-10 xl:w-10" />
+                        <img src="assets/images/form-mobile.png?v=2" alt="" className="w-10 xl:w-10" />
                     </div>
                     <div className="xl:w-5 lg:pl-4 flex flex-column align-items-center xl:align-items-start justify-content-center">
                         {
@@ -249,34 +248,34 @@ const IndexPage = () => {
                     Baixe o app e <b>economize</b> de forma inteligente
                 </span>
                 <div className="block xl:hidden w-full mt-5 text-center">
-                    <img src="assets/images/mobile-3.png" alt="" className="w-10" />
+                    <img src="assets/images/mobile-3.png?v=2" alt="" className="w-10" />
                 </div>
                 <div className="my-7 text-center xl:text-left">
                     <a href="https://apps.apple.com/br/app/carteira-ia/id6480260085?l=pt-BR" target="_blank">
-                        <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} className="cursor-pointer" />
+                        <img src="./assets/images/apple-play-button.png?v=2" style={{ height: '56px' }} className="cursor-pointer" />
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=com.carteiraia.app" target="_blank">
-                        <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2 cursor-pointer" />
+                        <img src="./assets/images/google-play-button.png?v=2" style={{ height: '56px' }} className="md:ml-2 cursor-pointer" />
                     </a>
                 </div>
             </div>
             <div ref={controller.components.section8ColumnRight.ref} className="hidden xl:block w-8 lg:w-5 xl:w-3 xl:pl-4 animated">
-                <img src="assets/images/mobile-3.png" alt="" className="w-full mb-5 xl:mb-0" />
+                <img src="assets/images/mobile-3.png?v=2" alt="" className="w-full mb-5 xl:mb-0" />
             </div>
         </section>
         <section className="w-full flex flex-column lg:flex-row align-items-center justify-content-center" style={{ backgroundColor: '#00988D' }}>
             <div className="w-8 m-6 flex flex-column align-items-center lg:flex-row">
                 <div className="w-11 lg:w-4">
-                    <img src="assets/images/logo.png" alt="" className="w-6" />
+                    <img src="assets/images/logo.png?v=2" alt="" className="w-6" />
                     <p className="text-lg line-height-2 my-4" style={{ color: '#D9EEE8' }}>
-                        Lorem ipsum dolor sit amet consectetur. Quis amet scelerisque diam mauris sed. Semper fermentum quis et lobortis diam.
+                        Feita para quem procura uma solução única e intuitiva ao lidar com as finanças, desde profissionais até pequenos negócios.
                     </p>
                     <div className="text-center xl:text-left">
                         <a href="https://apps.apple.com/br/app/carteira-ia/id6480260085?l=pt-BR" target="_blank">
-                            <img src="./assets/images/apple-play-button.png" style={{ height: '56px' }} />
+                            <img src="./assets/images/apple-play-button.png?v=2" style={{ height: '56px' }} />
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.carteiraia.app" target="_blank">
-                            <img src="./assets/images/google-play-button.png" style={{ height: '56px' }} className="md:ml-2" />
+                            <img src="./assets/images/google-play-button.png?v=2" style={{ height: '56px' }} className="md:ml-2" />
                         </a>
                     </div>
                 </div>
@@ -299,13 +298,13 @@ const IndexPage = () => {
                 <div className="w-11 lg:w-4 py-4 lg:py-0 flex flex-row align-items-center justify-content-center">
 
                     <a href="https://www.facebook.com/carteiraia" target="_blank">
-                        <img src="assets/images/facebook.png" style={{ width: '32px' }} />
+                        <img src="assets/images/facebook.png?v=2" style={{ width: '32px' }} />
                     </a>
-                    <a href="https://www.instagram.com/carteira-ia/" target="_blank" className="mx-4">
-                        <img src="assets/images/instagram.png" style={{ width: '32px' }} />
+                    <a href="https://www.instagram.com/carteiraia/" target="_blank" className="mx-4">
+                        <img src="assets/images/instagram.png?v=2" style={{ width: '32px' }} />
                     </a>
                     <a href="https://www.linkedin.com/company/carteiraia/" target="_blank">
-                        <img src="assets/images/linkedin.png" style={{ width: '32px' }} />
+                        <img src="assets/images/linkedin.png?v=2" style={{ width: '32px' }} />
                     </a>
                 </div>
             </div>
@@ -313,13 +312,13 @@ const IndexPage = () => {
         <section className="w-full flex flex-column lg:flex-row align-items-center justify-content-center" style={{ backgroundColor: '#0A6561' }}>
             <div className="w-11 lg:w-8 m-6 flex flex-column">
                 <span className="text-base uppercase" style={{ color: '#D9EEE8' }}>
-                    carteira ia tecnologia e pagamentos CNPJ 11.148.205/0001-35
+                    carteira ia tecnologia e pagamentos CNPJ 52.632.792/0001-10
                 </span>
                 <p className="text-sm line-height-2 my-4" style={{ color: '#D9EEE8' }}>
-                    Lorem ipsum dolor sit amet consectetur. Phasellus orci facilisis gravida in viverra enim augue id eu. Sed urna maecenas morbi ipsum porta massa id. Et diam quam vitae ut et egestas leo ornare. Curabitur eget nibh condimentum tempus elementum et. Risus in dapibus semper ornare suspendisse sagittis rutrum posuere senectus. Consectetur ultrices ac pulvinar volutpat ut vitae lorem suscipit. Pulvinar tortor enim aliquet quisque. Id justo nibh bibendum lectus. Maecenas natoque netus metus enim ultrices aliquet nulla. Habitasse mattis sollicitudin vestibulum ultricies varius iaculis arcu. Rhoncus sed cras vestibulum amet.
+                    Ao utilizar a Carteira IA, você concorda em aderir estritamente à nossa política de uso responsável da inteligência artificial (IA) e do gerenciamento de dados financeiros. É proibido utilizar a IA para a criação ou disseminação de conteúdo enganoso, a manipulação fraudulenta de dados ou qualquer forma de atividade ilegal, incluindo, mas não se limitando a, lavagem de dinheiro ou financiamento ao terrorismo. Além disso, ressaltamos que todas as operações bancárias, incluindo transações e gerenciamento de contas, são realizadas através de nosso parceiro credenciado, que possui conexão direta com o Banco Central do Brasil, garantindo assim a segurança e a conformidade regulatória. Ao aceitar estes termos, você se compromete a utilizar nossos serviços de forma ética e em total conformidade com as leis vigentes.
                 </p>
                 <span className="text-base uppercase" style={{ color: '#D9EEE8' }}>
-                    copyright 2024
+                    Rua Bom Jesus, 212 | Curitiba/PR - CEP 80035-010 | Brasil
                 </span>
             </div>
         </section>
@@ -341,29 +340,29 @@ const IndexPage = () => {
 
         >
             <span className="text-lg mb-3 block font-bold" style={{ color: '#985699' }}>Compartilhe essa novidade com seus amigos</span>
-            <FacebookShareButton url={window.location.href} className="mx-2" hashtag="#carteriaia, #chatgpt, #inteligenciaarticial, #ia">
+            <FacebookShareButton url={window.location.href} className="mx-2" hashtag="#carteiraia, #finanças, #inteligenciaarticial, #ia">
                 <FacebookIcon size={50} round />
             </FacebookShareButton>
             <LinkedinShareButton className="mx-2"
                 url={window.location.href}
                 source={window.location.href}
-                title="Carteira IA - a revolução para sua vida financeira"
-                summary="Carteria IA - a revolução para sua vida financeira, controle o seu financeiro usando IA e cuide melhor do seu dinheiro"
+                title="Carteira IA - revolucione sua gestão financeira"
+                summary="Carteira IA - uma solução única para gestão de finanças e pagamentos com inteligência artificial"
             >
                 <LinkedinIcon size={50} round />
             </LinkedinShareButton>
             <TwitterShareButton url={window.location.href} className="mx-2"
-                title='Carteira IA - a revolução para sua vida financeira'
-                hashtags={['carteiraia', 'inteligenciaarticial', 'ia', 'chatgpt']}
+                title='Carteira IA - revolucione sua gestão financeira'
+                hashtags={['carteiraia', 'inteligenciaarticial', 'ia', 'finanças']}
             >
                 <XIcon size={50} round />
             </TwitterShareButton>
             <WhatsappShareButton url={window.location.href} className="mx-2"
-                title='Carteira IA - a revolução para sua vida financeira'
+                title='Carteira IA - revolucione sua gestão financeira'
             >
                 <WhatsappIcon size={50} round />
             </WhatsappShareButton>
-            <TelegramShareButton url={window.location.href} className="mx-2" title='Carteira IA - a revolução para sua vida financeira'>
+            <TelegramShareButton url={window.location.href} className="mx-2" title='Carteira IA - revolucione sua gestão financeira'>
                 <TelegramIcon size={50} round />
             </TelegramShareButton>
         </Modal>
